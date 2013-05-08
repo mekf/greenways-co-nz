@@ -1,0 +1,256 @@
+<!DOCTYPE html> 
+<html dir="ltr" lang="en-US"> 
+<head> 
+<meta charset="UTF-8" /> 
+<meta name="Author" content="Aaron Rose, aaron.rose@contrast.net.nz"> 
+<meta name="Designer" content="Contrast.net.nz - Aaron Rose"> 
+ 
+<link rel="stylesheet" type="text/css" media="all" href="../internal/css/global.css" />
+<link rel="stylesheet" href="http://www.greenways.co.nz/tabs/css/style.css">
+ 
+<title>Greenways - Our Products</title>
+
+<meta name="Keywords" content="Juice, Greenways, Healthy, Organic, Grape, Apple, Feijoa, Orange">
+<meta name="Description" content="Locally grown goodness, squeezed and freshly bottled for your fruity lifestyle. Greenways is proud to be New Zealand owned since 1956. Our philosophy is simplicity, we do not add any preservatives or colourings, we let nature do the work for us in creating these great flavours for your enjoyment. ">
+
+<meta name="Designer" content="IguchiandCo.com - Iguchi & Co">
+	<script src="../internal/assets/scripts/bouncer.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../internal/assets/scripts/mootools.svn.js" type="text/javascript" charset="utf-8"></script>
+	
+	<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js'></script>
+	<script src="../internal/assets/scripts/organictabs.jquery.js"></script>
+	
+<script>
+     jQuery.noConflict();
+     
+     // Use jQuery via jQuery(...)
+
+	jQuery(document).ready(function() {
+		jQuery(".focus").hover(function() {
+			jQuery(this).siblings().stop(true, true).fadeTo('400', 0.5, function() {			
+				jQuery(".focus").hover(function() {
+					jQuery(this).stop(true, true).fadeTo('400', 1);
+				});
+			});
+		});
+	});
+	 
+    jQuery(function() { 
+		jQuery("#tabs").organicTabs(); 
+	});
+
+     // Use Prototype with $(...), etc.
+window.addEvent('domready', function(){ 
+	  var totIncrement		= 0;
+	  var increment			= 980;
+	  var maxRightIncrement	= increment*(-2);
+	  var fx = new Fx.Style('slider-list', 'margin-left', {
+				duration: 800,
+				transition: Fx.Transitions.Back.easeInOut,
+				wait: true
+	   });
+	   
+	   //-------------------------------------
+	  // EVENTS for the button "previous"
+	  $('previous').addEvents({ 
+          'click' : function(event){ 
+		  if(totIncrement<0){
+					totIncrement = totIncrement+increment;
+					fx.stop()
+					fx.start(totIncrement);
+				}
+			}			  	  
+      }); 
+	 
+       //-------------------------------------
+	  // EVENTS for the button "next"
+  	  $('next').addEvents({ 
+          'click' : function(event){ 
+			 if(totIncrement>maxRightIncrement){
+				 totIncrement = totIncrement-increment;
+		    	fx.stop()
+				fx.start(totIncrement);
+			}
+          }		  		  
+      })
+
+	 
+});
+   </script>
+
+
+	
+<style type="text/css">
+#slider-stage{width:980px; overflow:hidden; overflow-x:hidden; overflow-y:hidden; height:350px; margin:0 auto;}
+#slider-buttons{width:980px; margin:0 auto;}
+	#slider-list{width:2940px; border:0; margin:0; padding:0; left:400px;}
+	#slider-list li{
+		list-style:none; 
+		margin:0; 
+		padding:0; 
+		border:0; 
+		float:left;
+		width:980px;
+		height:350px;
+		}
+
+.p-bounce {
+ position:absolute;top:30px;
+}
+</style>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25940595-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+
+<body>
+<div class="wrapper">
+
+<div id="header">
+	<a id="logo" href="../index.html"></a>
+	
+	<div id="navigation">
+		<div class="socialbtns">
+			<a id="fb" target="_blank" href="https://www.facebook.com/GreenwaysJuice"></a>
+			<a id="tw" target="_blank" href="http://twitter.com/greenwaysjuice"></a>
+		</div>
+		<div class="navlist">
+			<a href="../index.html">Home</a>
+			<a id="active" href="index.html">Our Products</a>
+			<a href="../locations/index.html">Where To Buy</a>
+			<a href="../about/index.html">About Greenways</a>
+			<a href="../contact/index.html">Contact Us</a>
+		</div>
+	</div>
+</div>
+
+
+
+        <div id="tabs" style="clear: both;">
+        			
+<div id="banner" style="overflow: hidden; margin: 0 auto; width: 980px; height: 350px; background: url('../images/base/sliderbg.png') top center;">
+<div style="position: relative; ">
+	<div id="slider-stage" style="position: relative;">
+	<ul id="slider-list">
+		<li id="l1">
+				<div style="width: 800px; height: 350px; margin: 0 auto;">
+					<ul class="nav">
+						<div class="focus"><li class="bounce" style="position: relative; width: 126px; height: 350px; margin: -40px 17px; float: left;"><a href="index.html#d-1309911635" class="current"><img class="p-bounce" id="p-1309911635" src="../images/products/apple.png" style="cursor: pointer; height: 301px; width: 126px; top: 80px;" onmouseover="AddBounce('p-1309911635',80,40,200);" alt=""></a></li></div><div class="focus"><li class="bounce" style="position: relative; width: 126px; height: 350px; margin: -40px 17px; float: left;"><a href="index.html#d-1309911661" class="current"><img class="p-bounce" id="p-1309911661" src="../images/products/grape.png" style="cursor: pointer; height: 301px; width: 126px; top: 80px;" onmouseover="AddBounce('p-1309911661',80,40,200);" alt=""></a></li></div><div class="focus"><li class="bounce" style="position: relative; width: 126px; height: 350px; margin: -40px 17px; float: left;"><a href="index.html#d-1309911691" class="current"><img class="p-bounce" id="p-1309911691" src="../images/products/apple-feijoa.png" style="cursor: pointer; height: 301px; width: 126px; top: 80px;" onmouseover="AddBounce('p-1309911691',80,40,200);" alt=""></a></li></div><div class="focus"><li class="bounce" style="position: relative; width: 126px; height: 350px; margin: -40px 17px; float: left;"><a href="index.html#d-1309911709" class="current"><img class="p-bounce" id="p-1309911709" src="../images/products/apple-orange.png" style="cursor: pointer; height: 301px; width: 126px; top: 80px;" onmouseover="AddBounce('p-1309911709',80,40,200);" alt=""></a></li></div><div class="focus"><li class="bounce" style="position: relative; width: 126px; height: 350px; margin: -40px 17px; float: left;"><a href="index.html#d-1309911730" class="current"><img class="p-bounce" id="p-1309911730" src="../images/products/apple-boysenberry.png" style="cursor: pointer; height: 301px; width: 126px; top: 80px;" onmouseover="AddBounce('p-1309911730',80,40,200);" alt=""></a></li></div>					</ul>
+				</div>
+		</li>
+		<li id="l2">
+				<div style="width: 800px; height: 350px; margin: 0 auto;">
+					<ul class="nav">
+						<div class="focus"><li class="bounce" style="position: relative; width: 126px; height: 350px; margin: -40px 17px; float: left;"><a href="index.html#d-1310374005" class="current"><img class="p-bounce" id="p-1310374005" src="../images/products/apple-330ml.png" style="cursor: pointer; height: 301px; width: 126px; top: 80px;" onmouseover="AddBounce('p-1310374005',80,40,200);" alt=""></a></li></div><div class="focus"><li class="bounce" style="position: relative; width: 126px; height: 350px; margin: -40px 17px; float: left;"><a href="index.html#d-1310380353" class="current"><img class="p-bounce" id="p-1310380353" src="../images/products/grape-330ml.png" style="cursor: pointer; height: 301px; width: 126px; top: 80px;" onmouseover="AddBounce('p-1310380353',80,40,200);" alt=""></a></li></div><div class="focus"><li class="bounce" style="position: relative; width: 126px; height: 350px; margin: -40px 17px; float: left;"><a href="index.html#d-1310380375" class="current"><img class="p-bounce" id="p-1310380375" src="../images/products/apple-feijoa-330ml.png" style="cursor: pointer; height: 301px; width: 126px; top: 80px;" onmouseover="AddBounce('p-1310380375',80,40,200);" alt=""></a></li></div><div class="focus"><li class="bounce" style="position: relative; width: 126px; height: 350px; margin: -40px 17px; float: left;"><a href="index.html#d-1310380416" class="current"><img class="p-bounce" id="p-1310380416" src="../images/products/apple-orange-330ml.png" style="cursor: pointer; height: 301px; width: 126px; top: 80px;" onmouseover="AddBounce('p-1310380416',80,40,200);" alt=""></a></li></div><div class="focus"><li class="bounce" style="position: relative; width: 126px; height: 350px; margin: -40px 17px; float: left;"><a href="index.html#d-1310380461" class="current"><img class="p-bounce" id="p-1310380461" src="../images/products/apple-grape-330ml.png" style="cursor: pointer; height: 301px; width: 126px; top: 80px;" onmouseover="AddBounce('p-1310380461',80,40,200);" alt=""></a></li></div>					</ul>
+				</div>
+		</li>
+		<li id="l3">
+				<div style="width: 800px; height: 350px; margin: 0 auto;">
+					<ul class="nav">
+						<div class="focus"><li class="bounce" style="position: relative; width: 126px; height: 350px; margin: -40px 17px; float: left;"><a href="index.html#d-1331109811" class="current"><img class="p-bounce" id="p-1331109811" src="../admin/data/upimages/Screen_Shot_2012-03-07_at_9.54.02_PM.png" style="cursor: pointer; height: 301px; width: 126px; top: 80px;" onmouseover="AddBounce('p-1331109811',80,40,200);" alt=""></a></li></div>					</ul>
+				</div>
+		</li>
+	</ul>
+	<div id="slider-buttons" style="">
+	<a href="index.html#" id="previous" style="display: block;  background: url('../images/base/slider_prev.png');  height: 38px;  width: 23px;  position: absolute;  top: 150px;  left: 10px;"></a>
+	<a href="index.html#" id="next" style="display: block;  background: url('../images/base/slider_next.png');  height: 38px;  width: 23px;  position: absolute;  top: 150px;  right: 10px;"></a>
+	</div>
+	</div>
+	</div>
+
+</div>
+			
+<div style="width: 980px; height: 173px; margin: 10px auto 0 auto; background: url('../images/base/contentbox_fw.png');">
+			<div class="list-wrap">
+				<div id="d-1309911635">
+<div style="height: 153px; width: 250px; margin-top: 10px; margin-left: 10px; float: left; background: url('images/products/icons/apple.png');"></div>
+<div style="height: 143px; width: 700px; margin-top: 20px; margin-right: 20px; float: left; font-family: 'Greenways';">
+<h3>Apple Juice 2 Litres [New Season!]</h3>
+<p>Our Apple juice has been loved by New Zealanders for over 50 years. Freshly squeezed New Zealand grown new season apples, bottled in a Greenways bottle, the way it should be. Great tasting, natural apple juice, that's the way we like it. No preservatives. No colourings. No added sugar.</p>
+</div>
+</div>
+				<div id="d-1309911661" class="hide">
+<div style="height: 153px; width: 250px; margin-top: 10px; margin-left: 10px; float: left; background: url('http://www.greenways.co.nz/products/ /images/products/icons/grape.png');"></div>
+<div style="height: 143px; width: 700px; margin-top: 20px; margin-right: 20px; float: left; font-family: 'Greenways';">
+<h3>100% Pure Grape Juice 2 Litres</h3>
+<p>Our 100% grape juice has been loved by New Zealanders for over 50 years, it is fair to say this is our signature product. Carefully grown grapes from our own vineyard, freshly squeezed in your Greenways bottle, packed with goodness. 100% natural, the way we like it. No preservatives. No colourings. No additives.</p>
+</div>
+</div><div id="d-1309911691" class="hide">
+<div style="height: 153px; width: 250px; margin-top: 10px; margin-left: 10px; float: left; background: url('../images/products/icons/apple-feijoa.png');"></div>
+<div style="height: 143px; width: 700px; margin-top: 20px; margin-right: 20px; float: left; font-family: 'Greenways';">
+<h3>Apple and Feijoa Juice (2 Litres)</h3>
+<p>The perfect balance beverage between New Zealand grown apples and our unique feijoa, we give you Greenways Apple & Feijoa. The best way to drink feijoas. Squeezed natural goodness in every Greenways bottle, just the way we like it. No preservatives. No colourings. No added sugar.</p>
+</div>
+</div><div id="d-1309911709" class="hide">
+<div style="height: 153px; width: 250px; margin-top: 10px; margin-left: 10px; float: left; background: url('../images/products/icons/apple-orange.png');"></div>
+<div style="height: 143px; width: 700px; margin-top: 20px; margin-right: 20px; float: left; font-family: 'Greenways';">
+<h3>Apple and Orange Juice (2 Litres)</h3>
+<p>To create a perfect balance of taste, sweetness and goodness, we have created Apple & Orange. Pleasingly refreshing. All natural, that&#8217;s the way we like it. No preservatives. No colourings. No added sugar.</p>
+</div>
+</div><div id="d-1309911730" class="hide">
+<div style="height: 153px; width: 250px; margin-top: 10px; margin-left: 10px; float: left; background: url('../images/products/icons/apple-boysenberry.png');"></div>
+<div style="height: 143px; width: 700px; margin-top: 20px; margin-right: 20px; float: left; font-family: 'Greenways';">
+<h3>Apple and Boysenberry Juice (2 Litres)</h3>
+<p>Our Apple and Boysenberry juice combines the sweet fresh taste of New Zealand grown apples with the rich sweet-tart flavour of boysenberry. Freshly squeezed and bottled in a Greenways bottle, just the way it should be. Great tasting natural juice, just the way we like it. No preservatives. No colourings. No added sugar.</p>
+</div>
+</div><div id="d-1310374005" class="hide">
+<div style="height: 153px; width: 250px; margin-top: 10px; margin-left: 10px; float: left; background: url('http://www.greenways.co.nz/products/ /images/products/icons/apple.png');"></div>
+<div style="height: 143px; width: 700px; margin-top: 20px; margin-right: 20px; float: left; font-family: 'Greenways';">
+<h3>Apple Juice (330ml)</h3>
+<p>Our Apple juice has been loved by New Zealanders for over 50 years. Freshly squeezed New Zealand grown apples, bottled in a Greenways bottle, the way it should be. Great tasting, natural apple juice, that's the way we like it. No preservatives. No colourings. No added sugar.</p>
+</div>
+</div><div id="d-1310380353" class="hide">
+<div style="height: 153px; width: 250px; margin-top: 10px; margin-left: 10px; float: left; background: url('../images/products/icons/grape.png');"></div>
+<div style="height: 143px; width: 700px; margin-top: 20px; margin-right: 20px; float: left; font-family: 'Greenways';">
+<h3>100% Pure Grape Juice (330ml)</h3>
+<p>Our 100% grape juice has been loved by New Zealanders for over 50 years, it is fair to say this is our signature product. Carefully grown grapes from our own orchard, freshly squeezed in your Greenways bottle, packed with goodness. 100% natural, the way we like it. No preservatives. No colourings. No additives.</p>
+</div>
+</div><div id="d-1310380375" class="hide">
+<div style="height: 153px; width: 250px; margin-top: 10px; margin-left: 10px; float: left; background: url('../images/products/icons/apple-feijoa.png');"></div>
+<div style="height: 143px; width: 700px; margin-top: 20px; margin-right: 20px; float: left; font-family: 'Greenways';">
+<h3>Apple and Feijoa Juice (330ml)</h3>
+<p>The perfect balance beverage between New Zealand grown apples and our unique feijoa, we give you Greenways Apple & Feijoa. The best way to drink feijoas. Squeezed natural goodness in every Greenways bottle, just the way we like it. No preservatives. No colourings. No added sugar.</p>
+</div>
+</div><div id="d-1310380416" class="hide">
+<div style="height: 153px; width: 250px; margin-top: 10px; margin-left: 10px; float: left; background: url('../images/products/icons/apple-orange.png');"></div>
+<div style="height: 143px; width: 700px; margin-top: 20px; margin-right: 20px; float: left; font-family: 'Greenways';">
+<h3>Apple and Orange Juice (330ml)</h3>
+<p>To create a perfect balance of taste, sweetness and goodness, we have created Apple & Orange. Pleasingly refreshing. All natural, that&#8217;s the way we like it. No preservatives. No colourings. No added sugar.</p>
+</div>
+</div><div id="d-1310380461" class="hide">
+<div style="height: 153px; width: 250px; margin-top: 10px; margin-left: 10px; float: left; background: url('../images/products/icons/apple-grape.png');"></div>
+<div style="height: 143px; width: 700px; margin-top: 20px; margin-right: 20px; float: left; font-family: 'Greenways';">
+<h3>Apple and Grape Juice (330ml)</h3>
+<p>Our Apple and Grape juice is a combination of two amazing fruit juices. Freshly squeezed New Zealand grown apples, and carefully grown grapes from our own orchard bottled in a Greenways bottle, the way it should be. Great tasting, natural juice, just the way we like it. No preservatives. No colourings. No added sugar.</p>
+</div>
+</div><div id="d-1331109811" class="hide">
+<div style="height: 153px; width: 250px; margin-top: 10px; margin-left: 10px; float: left; background: url('../admin/data/upimages/Screen_Shot_2012-03-07_at_10.13.13_PM.png');"></div>
+<div style="height: 143px; width: 700px; margin-top: 20px; margin-right: 20px; float: left; font-family: 'Greenways';">
+<h3>Greenways SprayFree Grape</h3>
+<p>Our 100% grape juice has been loved by New Zealanders for over 50 years, it is fair to say this is our signature product. The grapes here are on a separate farm, cared for naturally without a single spray. As usual they are freshly squeezed in your Greenways bottle, packed with goodness. 100% natural, the way we like it. No preservatives. No colourings. No additives, No nonsense.</p>
+</div>
+</div>			</div>
+</div>
+         
+         </div>
+		 
+<br style="clear: both;" />
+
+<div id="footer">
+COPYRIGHT 2011 GREENWAYS PURE FRUIT JUICES LIMITED. ALL RIGHTS RESERVED. <a href="http://www.iguchiandco.com/" target="_blank" style="color: #fff; text-decoration: none;">SITE BY IGUCHI & CO</a>.
+</div>
+		 </div>
+		 
+</body>
+</html>
