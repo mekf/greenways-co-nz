@@ -59,7 +59,7 @@ Author: Aaron Rose
 #locbar {
 	position: relative;
 	margin-left: 10px;
-	width: 400px;
+	width: 395px;
 	height: 47px;
 	background: url('../../images/base/locbar.png') top center;
 	float: left;
@@ -75,7 +75,7 @@ Author: Aaron Rose
 #loclist {
 	position: relative;
 	margin: 10px 0 0 10px;
-	width: 400px;
+	width: 395px;
 	height: 694px;
 	background: url('../../images/base/loclistbg.png') top center;
 	float: left;
