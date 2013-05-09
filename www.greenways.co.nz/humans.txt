@@ -1,8 +1,15 @@
-Maintainer:
-Minh, HA
-Enspiral Services Ltd
-www.enspiral.comn
+/* TEAM */
+	Developer/Maintainer: Minh, HA
+	Enspiral Services Ltd
+	www.enspiral.comn
 
-Original Designer:
-Aaron Rose, aaron.rose@contrast.net.nz
-IguchiandCo.com - Iguchi & Co
+	Original Designer: Aaron Rose
+	IguchiandCo.com - Iguchi & Co
+	aaron.rose@contrast.net.nz
+
+/* THANKS */
+
+/* SITE */
+	Last update: 09/05/2013
+	Language: English
+	Doctype: HTML
