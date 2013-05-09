@@ -21,6 +21,10 @@ Author: Aaron Rose
     font-style: normal;
 }
 
+#img_rounded_corner {
+	-moz-border-radius: 11px;
+	border-radius: 11px;
+}
 
 body	{
 	background: #ffffff url('../../images/base/background.jpg') top center fixed no-repeat;
