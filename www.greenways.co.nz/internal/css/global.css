@@ -16,10 +16,10 @@ Author: Aaron Rose
 @font-face {
     font-family: 'Greenways';
     src: url('../assets/fonts/greenways-webfont.eot');
-    src: url('../assets/fonts/greenways-webfont.eot%3F') format('embedded-opentype'),
+    src: url('../assets/fonts/greenways-webfont.eot?#iefix') format('embedded-opentype'),
          url('../assets/fonts/greenways-webfont.woff') format('woff'),
          url('../assets/fonts/greenways-webfont.ttf') format('truetype'),
-         url('../assets/fonts/greenways-webfont.svg') format('svg');
+         url('../assets/fonts/greenways-webfont.svg#Greenways') format('svg');
     font-weight: normal;
     font-style: normal;
 }
