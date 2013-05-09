@@ -14,9 +14,6 @@
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js" type="text/javascript"></script>
 
-  <!-- API v2 -->
-  <!-- <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=true&amp;key=ABQIAAAASiQcS3YxcoezGlcuEHt0VBQEHb7M5kSpkPv2iThGI9OVo_v-txTpYNEaqQbiifnFQcYBIhkgAhDLSw" type="text/javascript"></script> -->
-
   <!-- API v3 -->
   <!-- Dev Key AIzaSyAFBOUx3sXLK1QDkjL0F_c4-oHaDAFMNFc -->
   <!-- Production Key AIzaSyBdFpowdoBy9gDpBh61G8j9bFm2wV3ASIs -->
@@ -34,13 +31,16 @@
     var nzCenterLatLng = new google.maps.LatLng(-40.86368,172.441406);
     var wlgLatLng = new google.maps.LatLng(-41.28646, 174.776236);
 
+    var mapOptions = {
+      center: nzCenterLatLng,
+      zoom: 6,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+
     function initialize () {
       var map = new google.maps.Map(
-        document.getElementById('map-canvas'), {
-          center: nzCenterLatLng,
-          zoom: 6,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
-        });
+        document.getElementById('map-canvas'), mapOptions
+        );
       }
 
     // OLD v2 load code
