@@ -1,11 +1,13 @@
 /* TEAM */
-	Developer/Maintainer: Minh, HA
+	Developer / Maintainer: Minh, HA
 	Enspiral Services Ltd
 	www.enspiral.comn
+	From: Wellington, New Zealand
 
 	Original Designer: Aaron Rose
 	IguchiandCo.com - Iguchi & Co
 	aaron.rose@contrast.net.nz
+	From: Auckland, New Zealand
 
 /* THANKS */
 
