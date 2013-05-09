@@ -18,16 +18,12 @@
   <!-- <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=true&amp;key=ABQIAAAASiQcS3YxcoezGlcuEHt0VBQEHb7M5kSpkPv2iThGI9OVo_v-txTpYNEaqQbiifnFQcYBIhkgAhDLSw" type="text/javascript"></script> -->
 
   <!-- API v3 -->
-  <!-- Dev Key -->
-  <script type="text/javascript"
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdFpowdoBy9gDpBh61G8j9bFm2wV3ASIs&sensor=true">
-  </script>
+  <!-- Dev Key AIzaSyAFBOUx3sXLK1QDkjL0F_c4-oHaDAFMNFc -->
+  <!-- Production Key AIzaSyBdFpowdoBy9gDpBh61G8j9bFm2wV3ASIs -->
 
-  <!-- Production Key -->
-  <!-- 
   <script type="text/javascript"
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFBOUx3sXLK1QDkjL0F_c4-oHaDAFMNFc&sensor=true">
-  </script> -->
+  </script> 
 
   <script type="text/javascript">
     //<![CDATA[
@@ -177,11 +173,12 @@
 
 <div id="contentbody">
 
-  <div id='map_wrapper'>
-    <div id='map-canvas'></div>
+  <div id='map_wrapper' class='rounded_corner'>
+    <div id='map_upper_float'></div>
+    <div id='map-canvas' class='full_opacity'></div>
   </div>
 
-	<div id='locbar'>
+	<div id='locbar' class='rounded_corner'>
     <select id="regions" name="regions" onchange="ChangeDropdowns(this.value);">
       <option value="region">Find your nearest store</option>
 	
@@ -204,7 +201,7 @@
     </select>
 	</div>
 
-	<div id='loclist'>
+	<div id='loclist' class='rounded_corner'>
     <div style="visibility: hidden; position: absolute; top: 0; left: 0;">
       Address: <input type="text" id="addressInput" value="Auckland" />
      
