@@ -20,28 +20,12 @@
 
   <script type="text/javascript"
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFBOUx3sXLK1QDkjL0F_c4-oHaDAFMNFc&sensor=true">
-  </script> 
+  </script>
+
+  <script src='internal/js/gmap.js' type="text/javascript"></script>
 
   <script type="text/javascript">
     //<![CDATA[
-    var map;
-    var geocoder;
-
-    // nelson = center of NZ, tweaked to the left
-    var nzCenterLatLng = new google.maps.LatLng(-40.86368,172.441406);
-    var wlgLatLng = new google.maps.LatLng(-41.28646, 174.776236);
-
-    var mapOptions = {
-      center: nzCenterLatLng,
-      zoom: 6,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
-    };
-
-    function initialize () {
-      var map = new google.maps.Map(
-        document.getElementById('map-canvas'), mapOptions
-        );
-      }
 
     // OLD v2 load code
     // function load() {
@@ -150,6 +134,7 @@
   </script>
 </head>
 
+<!-- <body onload="load(),searchLocations()" onunload="GUnload()"> -->
 <body>
 <div class="wrapper">
 
@@ -203,6 +188,7 @@
 
 	<div id='loclist' class='rounded_corner'>
     <div style="visibility: hidden; position: absolute; top: 0; left: 0;">
+    <!-- <div style="position: absolute; top: 0; left: 0;"> -->
       Address: <input type="text" id="addressInput" value="Auckland" />
      
       Radius: <select id="radiusSelect">k

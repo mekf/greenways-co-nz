@@ -2,7 +2,7 @@
 <html dir="ltr" lang="en-US">
 <head>
 
-  <script type="text/javascript" src="http://greenways.co.nz/contact/contact-form.js"></script>
+  <!-- <script type="text/javascript" src="http://greenways.co.nz/contact/contact-form.js"></script> -->
 
   <meta charset="UTF-8" />
 
@@ -15,19 +15,18 @@
 
   <link type="text/plain" rel="author" href="http://www.greenways.co.nz/humans.txt" />
   
+  <script type="text/javascript" src="http://www.greenways-sandbox.tk/contact-files/contact-form.js"></script>
   <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-40754225-1']);
+    _gaq.push(['_trackPageview']);
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-40754225-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
 </head>
 
 <body>
@@ -80,9 +79,11 @@
         </div>
       </div>
       <br />
+      
       <div id="cform" style="position: relative; margin: 10px 0 0 0; width: 512px; height: 295px; background: url('images/base/cformbg.png'); float: left;">
         <div style="height: 100%; width: 100%; background: url('http://www.greenways.co.nz/images/temp/-cform.png'); color: #fff;">
-          <div style="float: left; height: 110px; width: 94px; margin-left: 20px; MARGIN-TOP: 22PX; COLOR: #fff; font-size: 21px;">
+          
+          <!-- <div style="float: left; height: 110px; width: 94px; margin-left: 20px; MARGIN-TOP: 22PX; COLOR: #fff; font-size: 21px;">
             <span style="margin-top: 0px; float: left;">NAME</span>
             <br style="clear: both;">
             <span style="margin-top: 11px; float: left;">EMAIL ADDRESS</span>
@@ -90,10 +91,16 @@
             <span style="margin-top: 11px; float: left;">PHONE NO.</span>
             <br style="clear: both;">
             <span style="margin-top: 11px; float: left;">MESSAGE</span>
-          </div>
+          </div> -->
+
+          <?php
+              $contact_form = 1; // set desired form number.
+              $contact_form_path = '/home/minha/greenways-sandbox/contact-files/'; // set path to /contact-files/ with slash on end.
+              require $contact_form_path . 'contact-form-run.php';
+          ?>
 
           <!-- Fast Secure Contact Form PHP plugin 3.0.4 - begin - FastSecureContactForm.com -->
-          <div id="FSCForm1" style="width: 467px; position: absolute; top: 17px; right: 20px;">
+          <!-- <div id="FSCForm1" style="width: 467px; position: absolute; top: 17px; right: 20px;">
             <form action="index.html#FSCForm1" id="fsc_form1" method="post">
 
               <div>
@@ -135,7 +142,7 @@
               </div>
 
             </form>
-          </div>
+          </div> -->
           <!-- Fast Secure Contact Form PHP plugin 3.0.4 - end - FastSecureContactForm.com -->
 
           <!--div style="float: left; height: 87px; margin-top: 17px; width:377px;">
