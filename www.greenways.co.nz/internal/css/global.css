@@ -24,6 +24,7 @@ Author: Aaron Rose
     font-style: normal;
 }
 
+/* Version 1.1 */
 .rounded_corner {
 	-webkit-border-radius: 11px;
 	-moz-border-radius: 11px;
@@ -103,19 +104,20 @@ Author: Aaron Rose
 	float: right;
 }
 
-#map_upper_float {
-	width: 100%;
-	height: 8px;
-}
+	#map_upper_float {
+		width: 100%;
+		height: 8px;
+	}
 
-#map-canvas {
-	margin-left: auto;
-	margin-right: auto;
-	width: 97%;
-	height: 97%;
-	overflow: hidden;
-}
+	#map-canvas {
+		margin-left: auto;
+		margin-right: auto;
+		width: 97%;
+		height: 97%;
+		overflow: hidden;
+	}
 
+/* Version 1.0 */
 body	{
 	background: #ffffff url('../../images/base/background.jpg') top center fixed no-repeat;
 	font-family: 'Greenways', 'segoe ui', arial;
