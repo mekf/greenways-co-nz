@@ -166,7 +166,7 @@
             AUCKLAND
           </div>
           <div style="width: 66px; float: left; color: #00a210;">PHONE/FAX.</div>
-          <div style="width: 170px; float: left;">+64 9 9085998</div>
+          <div style="float: left;">+64 9 9085998</div>
         </div>
       </div>
     </div>

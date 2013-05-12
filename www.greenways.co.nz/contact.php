@@ -2,7 +2,7 @@
 <html dir="ltr" lang="en-US">
 <head>
 
-  <script type="text/javascript" src="http://www.greenways.co.nz/contact/contact-form.js"></script>
+  <script type="text/javascript" src="http://greenways.co.nz/contact-files/contact-form.js"></script>
 
   <meta charset="UTF-8" />
 
@@ -55,7 +55,7 @@
         <div id='contact_form'>
           <?php
             $contact_form = 1; // set desired form number.
-            $contact_form_path = '/home/minha/greenways/contact-files/'; // set path to /contact-files/ with slash on end.
+            $contact_form_path = '/home/minha/greenways-nz/contact-files/'; // set path to /contact-files/ with slash on end.
             require $contact_form_path . 'contact-form-run.php';
           ?>
         </div>
@@ -86,7 +86,7 @@
               AUCKLAND
             </div>
             <div style="width: 66px; float: left; color: #00a210;">PHONE/FAX.</div>
-            <div style="width: 170px; float: left;">+64 9 9085998</div>
+            <div style="float: left;">+64 9 9085998</div>
           </div>
         </div>
       </div>
