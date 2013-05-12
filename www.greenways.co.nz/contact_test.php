@@ -45,7 +45,7 @@
           <a href="products/products.html">Our Products</a>
           <a href="locations.html">Where To Buy</a>
           <a href="about.html">About Greenways</a>
-          <a id="active" href="contact.html">Contact Us</a>
+          <a id="active" href="contact.php">Contact Us</a>
         </div>
       </div>
     </div>
