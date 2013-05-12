@@ -144,6 +144,24 @@ Author: Aaron Rose
 	/*width: 512px;*/
 }
 
+/* Fast Secure Contact Form Web Style */
+/*CSS style for form DIV on the contact form: width: 100%;
+CSS style for border on the contact form:
+CSS style for required field text on the contact form:
+CSS style for extra field HTML on the contact form:
+CSS style for form input titles on the contact form: text-align: left; font-size: 21px; padding-bottom: 5px; width: 100%;
+CSS style for form input fields on the contact form: text-align:left; margin:0; width: 100%;
+CSS style for form input fields DIV on the contact form: text-align:left; padding-bottom: 5px; width: 100%;
+CSS style for form input errors on the contact form: text-align:left; color:yellow;
+CSS style for contact drop down select on the contact form:
+CSS style for Small CAPTCHA DIV on the contact form:
+CSS style for CAPTCHA DIV on the contact form:
+CSS style for CAPTCHA input field on the contact form:
+CSS style for Submit DIV on the contact form:
+CSS style for Submit button on the contact form:
+CSS style for Reset button on the contact form:
+CSS style for "Powered by" message on the contact form:*/
+
 /* Version 1.0 */
 body	{
 	background: #ffffff url('../../images/base/background.jpg') top center fixed no-repeat;
