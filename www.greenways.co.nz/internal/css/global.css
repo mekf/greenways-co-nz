@@ -120,7 +120,7 @@ Author: Aaron Rose
 /* Contact */
 #cform {
 	position: relative;
-	background: url('../../images/base/cformbackground.png');
+	background: url('../../images/base/cform_bg.png');
 	float: left;
 	/*margin: 10px 0 0 0;*/
 	width: 512px;
@@ -137,8 +137,9 @@ Author: Aaron Rose
 /* Contact Right column */
 #contact_details {
 	position: relative;
-	background: url('../../images/base/contentbox_tl.png');
+	background: url('../../images/base/contentbox_bg.png');
 	margin: 0 0 10px 0;
+	padding: 10px 0 0 0;
 	float: left;
 	height: 206px;
 	width: 100%;
@@ -149,9 +150,9 @@ Author: Aaron Rose
 CSS style for border on the contact form:
 CSS style for required field text on the contact form:
 CSS style for extra field HTML on the contact form:
-CSS style for form input titles on the contact form: text-align: left; font-size: 20px; padding-bottom: 3px; width: 100%;
+CSS style for form input titles on the contact form: text-align: left; font-size: 21px; padding-bottom: 3px; width: 100%;
 CSS style for form input fields on the contact form: text-align:left; margin:0; width: 100%;
-CSS style for form input fields DIV on the contact form: text-align:left; padding-bottom: 12px; width: 100%;
+CSS style for form input fields DIV on the contact form: text-align:left; padding-bottom: 9px; width: 100%;
 CSS style for form input errors on the contact form: text-align:left; color:yellow;
 CSS style for contact drop down select on the contact form:
 CSS style for Small CAPTCHA DIV on the contact form:

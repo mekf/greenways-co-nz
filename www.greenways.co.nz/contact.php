@@ -99,7 +99,7 @@
 
     <div id="footer">
       COPYRIGHT 2011 GREENWAYS PURE FRUIT JUICES LIMITED. ALL RIGHTS RESERVED.
-      <a href="http://www.iguchiandco.com/" target="_blank" style="color: #fff; text-decoration: none;">SITE BY IGUCHI & CO</a>
+      <a href="http://www.iguchiandco.com/" target="_blank" style="color: #fff; text-decoration: none;">ORIGINAL SITE BY IGUCHI & CO</a>
       .
     </div>
 
