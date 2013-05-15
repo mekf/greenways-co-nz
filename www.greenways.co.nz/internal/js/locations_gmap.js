@@ -13,7 +13,7 @@ var locationsJSON = (function() {
   return json
 })();
 
-function initialize() {
+function locationsInitialize() {
   loadMap();
   loadSidebar();
 }
@@ -38,13 +38,17 @@ function loadSidebar() {
   var address = document.getElementById('addressInput').value;
   var geocoder = new google.maps.Geocoder();
   
-  geocoder.geocode({ 'address': address }, function (results, status) {
+  geocoder.geocode({ 'address': address }, function (latlng, status) {
     if (status == google.maps.GeocoderStatus.OK) {
-      buildSidebar();
+      searchLocations(latlng);
     } else {
       alert(address + ' not found');
     }
   });
+}
+
+function searchLocations(center) {
+  buildSidebar();
 }
 
 function buildSidebar() {
@@ -52,14 +56,23 @@ function buildSidebar() {
   var locEntry = locationsJSON.entries
 
   for (var i = 0; i < locEntry.length; i++) {
-    var name =    locEntry[i].name;
+    var name    = locEntry[i].name;
     var address = locEntry[i].address;
-    var phone =   locEntry[i].phone;
-    var region =  locEntry[i].region;
-    var sidebarEntry = createSidebarEntryNew(name, address, phone, region);
+    var phone   = locEntry[i].phone;
+    var region  = locEntry[i].region;
+    var sidebarEntry = createSidebarEntry(name, address, phone, region);
     sidebar.appendChild(sidebarEntry);
   }
   return sidebar;
+}
+
+function createMarker(point, name, address, phone, region) {
+  var marker = new GMarker(point);
+  var html = '<b>' + name + '</b> <br/>' + address + '<br/>' + region + '<br/>' + phone;
+  GEvent.addListener(marker, 'click', function() {
+    marker.openInfoWindowHtml(html);
+  });
+  return marker;
 }
 
 function createSidebarEntry(name, address, phone, region) {
