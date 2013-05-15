@@ -13,7 +13,7 @@ var locationsJSON = (function() {
   return json
 })();
 
-function initialize () {
+function initialize() {
   loadMap();
   loadSidebar();
 }
@@ -29,7 +29,8 @@ function loadMap() {
   };
 
   var map = new google.maps.Map(
-    document.getElementById('map-canvas'), mapOptions
+    document.getElementById('map-canvas'),
+    mapOptions
     );
 }
 
@@ -39,14 +40,14 @@ function loadSidebar() {
   
   geocoder.geocode({ 'address': address }, function (results, status) {
     if (status == google.maps.GeocoderStatus.OK) {
-      createSidebar();
+      buildSidebar();
     } else {
       alert(address + ' not found');
     }
   });
 }
 
-function createSidebar() {
+function buildSidebar() {
   var sidebar = document.getElementById('sidebar');
   var locEntry = locationsJSON.entries
 
@@ -61,7 +62,7 @@ function createSidebar() {
   return sidebar;
 }
 
-function createSidebarEntryNew(name, address, phone, region) {
+function createSidebarEntry(name, address, phone, region) {
   var div = document.createElement('div');
   var html = '<div style="margin-bottom: 20px;" class="' + region + ' region"><b>' + name + '</b><br/>' + address + '<br/>' + region + '<br/>' + phone + '</div>';
   div.innerHTML = html;
