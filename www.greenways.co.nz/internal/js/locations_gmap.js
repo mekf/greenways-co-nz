@@ -1,6 +1,3 @@
-var map;
-var geocoder;
-
 // Load locations.json
 var locationsJSON = (function() {
   var json = null;
@@ -16,15 +13,19 @@ var locationsJSON = (function() {
   return json;
 })();
 
+var map;
+var geocoder;
+var locEntry = locationsJSON.entries;
+
 function locationsInitialize() {
   loadMap();
-  loadSidebar();
+  buildSidebar();
+  // loadSidebar();
   console.log(locationsJSON);
 }
 
 function loadMap() {
-  var nzCenterLatLng = new google.maps.LatLng(-40.86368,172.441406); // left nelson = center of NZ,
-  var wlgLatLng = new google.maps.LatLng(-41.28646, 174.776236);
+  var nzCenterLatLng = new google.maps.LatLng(-40.86368,172.441406); // left of nelson = center of NZ,
 
   var mapOptions = {
     center: nzCenterLatLng,
@@ -37,33 +38,38 @@ function loadMap() {
 
 function loadSidebar() {
   var address = document.getElementById('addressInput').value;
-  var locEntry = locationsJSON.entries;
-  geocoder = new google.maps.Geocoder();
-
-  for (var i = 0; i < 11; i++) {
+  // locEntry.length
+  for (var i = 0; i < 10; i++) {
     var searchAddress = locEntry[i].address + ', ' + locEntry[i].region + ', ' + 'New Zealand';
-    geocoder.geocode({ 'address': searchAddress }, function (results, status) {
-      if (status == google.maps.GeocoderStatus.OK) {
-        searchLocations(results);
-      } else {
-        console.log(searchAddress + ' not found');
-      }
-    });
+    geocodeSearch(searchAddress);
   }
 }
 
-function searchLocations(results) {
-  map.setCenter(results[0].geometry.location);
-  var marker = new google.maps.Marker({
-      map: map,
-      position: results[0].geometry.location
+function geocodeSearch(string) {
+  geocoder = new google.maps.Geocoder();
+  geocoder.geocode({ 'address': string }, function (geoResults, status) {
+    if (status == google.maps.GeocoderStatus.OK) {
+      searchLocations(geoResults);
+    } else if (status == google.maps.GeocoderStatus.OVER_QUERY_LIMIT) {
+      alert('overload');
+    }
+    else {
+      alert(string + ' not found');
+    }
   });
-  // buildSidebar(param);
 }
 
-function buildSidebar(param) {
+function searchLocations(geoInfo) {
+  var marker = new google.maps.Marker({
+    map: map,
+    position: geoInfo[0].geometry.location
+  });
+  // map.setCenter(results[0].geometry.location);
+  // buildSidebar();
+}
+
+function buildSidebar() {
   var sidebar = document.getElementById('sidebar');
-  var locEntry = locationsJSON.entries;
 
   for (var i = 0; i < locEntry.length; i++) {
     var name    = locEntry[i].name;
