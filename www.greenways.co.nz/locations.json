@@ -1,5 +1,5 @@
 {
-	"locations": [
+	"entries": [
 		{
 			"name": "Bhana Brothers Fruiterers",
 			"address": "129 Ponsonby Road, Ponsonby",
@@ -8,13 +8,13 @@
 		},
 		{
 			"name": "Greenways Pure Fruit Juices",
-			"address": "16 Wayside Rd, Waikato, New Zealand",
+			"address": "16 Wayside Rd",
 			"region": "Waikato",
 			"phone": "07 826 3674"
 		},
 		{
 			"name": "Bulk Food Savings",
-			"address": "3/217 Dominion Road, Mt Eden, Auckland",
+			"address": "3/217 Dominion Road, Mt Eden",
 			"region": "Auckland",
 			"phone": "09 6306235"
 		},
@@ -32,13 +32,13 @@
 		},
 		{
 			"name": "Gilmours - Henderson",
-			"address": "Gilmours Henderson, 133 Central Park Drive",
+			"address": "133 Central Park Drive",
 			"region": "Auckland",
 			"phone": "09 6210600"
 		},
 		{
 			"name": "Gilmours - North Shore",
-			"address": "Gilmours North Shore, 37 Constellation Drive",
+			"address": "37 Constellation Drive",
 			"region": "Auckland",
 			"phone": "09 4795435"
 		},
@@ -50,7 +50,7 @@
 		},
 		{
 			"name": "Gilmours - Manukau",
-			"address": "Gilmours Manukau, 77 Cavendish Drive, Manukau",
+			"address": "77 Cavendish Drive, Manukau",
 			"region": "Auckland",
 			"phone": "09 2622 122"
 		},
@@ -67,26 +67,20 @@
 			"phone": "(09) 275 2567"
 		},
 		{
-			"name": "Countdown - Aviemore Drive",
-			"address": "Aviemore Drive, Pakuranga Highway, Pakuranga",
-			"region": "Auckland",
-			"phone": "(09) 534 7149"
-		},
-		{
 			"name": "Countdown - Birkenhead",
-			"address": "33 Birkenhead Avenue, Auckland",
+			"address": "33 Birkenhead Ave‎, Birkenhead",
 			"region": "Auckland",
 			"phone": "(09) 480 0675"
 		},
 		{
 			"name": "Countdown - Botany Downs",
-			"address": "475, Ti Rakau Drive, Botany",
+			"address": "475 Ti Rakau Dr, Huntington Park",
 			"region": "Auckland",
 			"phone": "(09) 255 2386"
 		},
 		{
 			"name": "Countdown - Glenfield",
-			"address": "34-38 Downing Street, Glenfield, New Zealand",
+			"address": "34/38 Downing Street, Glenfield",
 			"region": "Auckland",
 			"phone": "(09) 444 0400"
 		},
@@ -110,9 +104,9 @@
 		},
 		{
 			"name": "Countdown - Highland Park",
-			"address": "507 Pakuranga Highway, Highland Park, Auckland",
+			"address": "507 Pakuranga Road, Highland Park 2010",
 			"region": "Auckland",
-			"phone": "(09) 255 2466"
+			"phone": "(09) 537 5460"
 		},
 		{
 			"name": "Countdown - Howick",
@@ -506,7 +500,7 @@
 		},
 		{
 			"name": "Greenways Showroom",
-			"address": "4 Domain Road, Panmure",
+			"address": "4 Domain Rd, Panmure",
 			"region": "Auckland",
 			"phone": "(09) 908 5998"
 		}

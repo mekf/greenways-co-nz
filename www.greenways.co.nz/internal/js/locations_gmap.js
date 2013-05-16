@@ -1,3 +1,6 @@
+var map;
+var geocoder;
+
 // Load locations.json
 var locationsJSON = (function() {
   var json = null;
@@ -10,12 +13,13 @@ var locationsJSON = (function() {
         json = data;
     }
   });
-  return json
+  return json;
 })();
 
 function locationsInitialize() {
   loadMap();
   loadSidebar();
+  console.log(locationsJSON);
 }
 
 function loadMap() {
@@ -28,32 +32,38 @@ function loadMap() {
     mapTypeId: google.maps.MapTypeId.ROADMAP
   };
 
-  var map = new google.maps.Map(
-    document.getElementById('map-canvas'),
-    mapOptions
-    );
+  map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 }
 
 function loadSidebar() {
   var address = document.getElementById('addressInput').value;
-  var geocoder = new google.maps.Geocoder();
-  
-  geocoder.geocode({ 'address': address }, function (latlng, status) {
-    if (status == google.maps.GeocoderStatus.OK) {
-      searchLocations(latlng);
-    } else {
-      alert(address + ' not found');
-    }
+  var locEntry = locationsJSON.entries;
+  geocoder = new google.maps.Geocoder();
+
+  for (var i = 0; i < 11; i++) {
+    var searchAddress = locEntry[i].address + ', ' + locEntry[i].region + ', ' + 'New Zealand';
+    geocoder.geocode({ 'address': searchAddress }, function (results, status) {
+      if (status == google.maps.GeocoderStatus.OK) {
+        searchLocations(results);
+      } else {
+        console.log(searchAddress + ' not found');
+      }
+    });
+  }
+}
+
+function searchLocations(results) {
+  map.setCenter(results[0].geometry.location);
+  var marker = new google.maps.Marker({
+      map: map,
+      position: results[0].geometry.location
   });
+  // buildSidebar(param);
 }
 
-function searchLocations(center) {
-  buildSidebar();
-}
-
-function buildSidebar() {
+function buildSidebar(param) {
   var sidebar = document.getElementById('sidebar');
-  var locEntry = locationsJSON.entries
+  var locEntry = locationsJSON.entries;
 
   for (var i = 0; i < locEntry.length; i++) {
     var name    = locEntry[i].name;
@@ -81,6 +91,6 @@ function createSidebarEntry(name, address, phone, region) {
   div.innerHTML = html;
   div.id = 'block';
   div.style.cursor = 'pointer';
-  div.style.fontSize = '18px'; 
+  div.style.fontSize = '18px';
   return div;
 }
