@@ -23,12 +23,13 @@
   
   <script src='internal/js/locations_gmap.js' type="text/javascript"></script>
 
-  <!-- Pretty sure this one is used to dynamically switch display:none | block -->
+  <!-- Pretty sure this one is used to dynamically switch between display:none | display:block -->
   <script type="text/javascript">
     $(function() {  
         $('#regions').change(function(){
             $('.region').hide();
             $('.' + $(this).val()).show();
+            regionChange($(this).val());
         });
     });
   </script>
@@ -87,7 +88,7 @@
   	</div>
 
   	<div id='loclist' class='rounded_corner'>
-      <!-- Seems like he/she couldn't finish this -->
+      <!-- Seems like he/she didn't finish this function -->
       <div style="visibility: hidden; position: absolute; top: 0; left: 0;">
         Address: 
           <input type="text" id="addressInput" value="Auckland" />
