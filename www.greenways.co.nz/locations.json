@@ -32,13 +32,13 @@
 		},
 		{
 			"name": "Gilmours - Henderson",
-			"address": "Gilmours Henderson, 133 Central Park Drive",
+			"address": "133 Central Park Drive",
 			"region": "Auckland",
 			"phone": "09 6210600"
 		},
 		{
 			"name": "Gilmours - North Shore",
-			"address": "Gilmours North Shore, 37 Constellation Drive",
+			"address": "37 Constellation Drive",
 			"region": "Auckland",
 			"phone": "09 4795435"
 		},
@@ -50,7 +50,7 @@
 		},
 		{
 			"name": "Gilmours - Manukau",
-			"address": "Gilmours Manukau, 77 Cavendish Drive, Manukau",
+			"address": "77 Cavendish Drive, Manukau",
 			"region": "Auckland",
 			"phone": "09 2622 122"
 		},
@@ -110,7 +110,7 @@
 		},
 		{
 			"name": "Countdown - Highland Park",
-			"address": "507 Pakuranga Highway, Highland Park, Auckland",
+			"address": "507 Pakuranga Road, Highland Park, Auckland",
 			"region": "Auckland",
 			"phone": "(09) 255 2466"
 		},
@@ -122,7 +122,7 @@
 		},
 		{
 			"name": "Countdown - Kelston",
-			"address": "Cnr Great North and West Coast Roads Glen Eden",
+			"address": "2 West Coast Road, Kelston",
 			"region": "Auckland",
 			"phone": "(09) 255 2440"
 		},

@@ -1,10 +1,10 @@
-// Load locations.json
+// Load locations_geocode.json
 var locationsJSON = (function() {
   var json = null;
   $.ajax({
     'async': false,
     'global': false,
-    'url': "locations.json",
+    'url': "locations_geocode.json",
     'dataType': "json",
     'success': function (data) {
         json = data;
@@ -13,10 +13,11 @@ var locationsJSON = (function() {
   return json;
 })();
 
-var locEntries = locationsJSON.entries;
+var locEntry = locationsJSON;
 var map;
 var geocoder;
 var markersArray = [];
+var infoWindow = new google.maps.InfoWindow();
 
 function locationsInitialize() {
   loadMap();
@@ -38,80 +39,74 @@ function loadMap() {
 function loadSidebar() {
   var sidebar = document.getElementById('sidebar');
 
-  for (var i = 0; i < locEntries.length; i++) {
-    var name    = locEntries[i].name;
-    var address = locEntries[i].address;
-    var phone   = locEntries[i].phone;
-    var region  = locEntries[i].region;
-    var sidebarEntry = createSidebarEntry(name, address, phone, region);
+  for (var i = 0; i < locEntry.length; i++) {
+    var name    = locEntry[i].name;
+    var address = locEntry[i].address;
+    var phone   = locEntry[i].phone;
+    var region  = locEntry[i].region;
+    var marker  = plotMarkersLocationsFromJSON(locEntry[i]);
+    var sidebarEntry = createSidebarEntry(name, address, phone, region, marker);
     sidebar.appendChild(sidebarEntry);
-    // need on_click event (center + info window)
   }
   return sidebar;
 }
 
-// might be redundant
-// somewhat similar to the searchLocations of their old code
-function searchLocations() {
-  var address = document.getElementById('addressInput').value;
-  // locEntries.length \ will overload the querry. need timeout
-  for (var i = 0; i < 10; i++) {
-    var searchAdd = locEntries[i].address + ', ' + locEntries[i].region + ', ' + 'New Zealand';
-    geocodeSearch(searchAdd);
-  }
-}
-
-
 function regionChange(region) {
   deleteMarkersOverlays();
+  infoWindow = new google.maps.InfoWindow();
 
-  var searchAdd = [];
-  for (var i = 0; i < locEntries.length; i++) {
-    if (locEntries[i].region == region) {
-      searchAdd.push(locEntries[i].address + ', ' + locEntries[i].region + ', ' + 'New Zealand');
-    }
-  }
+  if (region == 'region') loadSidebar();
+  if (region == 'Plenty') region = 'Bay of Plenty';
+  if (region == 'Hawkes') region = 'Hawkes Bay';
+  if (region == 'West')   region = 'West Coast';
 
-  // Auckland will easily overload the geocoding request
-  if (region != 'Auckland') {
-    for (var j = 0; j < searchAdd.length; j++) {
-      geocodeSearch(searchAdd[j]);
+  for (var i = 0; i < locEntry.length; i++) {
+    if (region == locEntry[i].region) {
+      plotMarkersLocationsFromJSON(locEntry[i]);
     }
   }
 }
 
-function geocodeSearch(addString) {
-  geocoder = new google.maps.Geocoder();
-  geocoder.geocode({ 'address': addString }, function (geoResults, status) {
-    if (status == google.maps.GeocoderStatus.OK) {
-      plotMarkersLocations(geoResults);
-    } else if (status == google.maps.GeocoderStatus.OVER_QUERY_LIMIT) {
-      alert('overload');
-    }
-    else {
-      alert(addString + ' not found');
-    }
-  });
-}
-
-function plotMarkersLocations(geoInfo) {
+function plotMarkersLocationsFromJSON(geoInfo) {
+  var markerLocation = new google.maps.LatLng(geoInfo.latitude, geoInfo.longitude, true);
   var markerOptions = {
     map: map,
-    position: geoInfo[0].geometry.location
+    position: markerLocation
   };
   var marker = new google.maps.Marker(markerOptions);
+
+  var contentString = '<b>' + geoInfo.name + '</b>' +
+    '<br/>' + geoInfo.address +
+    '<br/>' + geoInfo.region +
+    '<br/>' + geoInfo.phone;
+  // var infoWindow = new google.maps.InfoWindow({
+  //   content: contentString
+  // });
+  google.maps.event.addListener(marker, 'click', function() {
+    infoWindow.setContent(contentString);
+    infoWindow.open(map, marker);
+  });
+
   markersArray.push(marker);
-  // map.setCenter(markerOptions.position);
-  // need on_click event for the marker (center + info window)
+  return marker;
 }
 
-function createSidebarEntry(name, address, phone, region) {
+function createSidebarEntry(name, address, phone, region, marker) {
   var div = document.createElement('div');
-  var html = '<div style="margin-bottom: 20px;" class="' + region + ' region"><b>' + name + '</b><br/>' + address + '<br/>' + region + '<br/>' + phone + '</div>';
-  div.innerHTML = html;
+  var divHTMLString = '<div style="margin-bottom: 20px;" class="' + region + ' region">' +
+    '<b>' + name + '</b>' +
+    '<br/>' + address +
+    '<br/>' + region +
+    '<br/>' + phone +
+    '</div>';
+  div.innerHTML = divHTMLString;
   div.id = 'block';
   div.style.cursor = 'pointer';
   div.style.fontSize = '18px';
+
+  google.maps.event.addDomListener(div, 'click', function() {
+    google.maps.event.trigger(marker, 'click');
+  });
   return div;
 }
 
@@ -122,14 +117,4 @@ function deleteMarkersOverlays() {
     }
     markersArray.length = 0;
   }
-}
-
-// Not yet ported
-function createMarker(point, name, address, phone, region) {
-  var marker = new GMarker(point);
-  var html = '<b>' + name + '</b> <br/>' + address + '<br/>' + region + '<br/>' + phone;
-  GEvent.addListener(marker, 'click', function() {
-    marker.openInfoWindowHtml(html);
-  });
-  return marker;
 }
