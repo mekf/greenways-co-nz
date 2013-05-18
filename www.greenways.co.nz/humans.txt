@@ -4,14 +4,13 @@
 	www.enspiral.comn
 	From: Wellington, New Zealand
 
+/* THANKS */
 	Original Designer: Aaron Rose
 	IguchiandCo.com - Iguchi & Co
 	aaron.rose@contrast.net.nz
 	From: Auckland, New Zealand
 
-/* THANKS */
-
 /* SITE */
-	Last update: 09/05/2013
+	Last update: 19/05/2013
 	Language: English
 	Doctype: HTML
