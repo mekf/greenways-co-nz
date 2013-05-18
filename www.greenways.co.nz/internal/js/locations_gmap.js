@@ -16,7 +16,7 @@ var locationsJSON = (function() {
 var locEntry = locationsJSON;
 var map;
 var markersArray = [];                          // use to delete the markersOverlay in API v3
-var infoWindow = new google.maps.InfoWindow();  // global infoWindow -> markers will create only one infoWindow (check plotMarkersLocations)
+var infoWindow = new google.maps.InfoWindow();  // global infoWindow -> markers will create only one infoWindow (check plotMarkerLocation)
 
 function locationsInitialize() {
   loadMap();
@@ -43,7 +43,7 @@ function loadSidebar() {
     var address = locEntry[i].address;
     var phone   = locEntry[i].phone;
     var region  = locEntry[i].region;
-    var marker  = plotMarkersLocations(locEntry[i]);
+    var marker  = plotMarkerLocation(locEntry[i]);
     var sidebarEntry = createSidebarEntry(name, address, phone, region, marker);
     sidebar.appendChild(sidebarEntry);
   }
@@ -61,12 +61,12 @@ function regionChange(region) {
 
   for (var i = 0; i < locEntry.length; i++) {
     if (region == locEntry[i].region) {
-      plotMarkersLocations(locEntry[i]);
+      plotMarkerLocation(locEntry[i]);
     }
   }
 }
 
-function plotMarkersLocations(geoInfo) {
+function plotMarkerLocation(geoInfo) {
   var markerLocation = new google.maps.LatLng(geoInfo.latitude, geoInfo.longitude, true);
   var markerOptions = {
     map: map,
