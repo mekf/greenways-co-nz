@@ -15,9 +15,8 @@ var locationsJSON = (function() {
 
 var locEntry = locationsJSON;
 var map;
-var geocoder;
-var markersArray = [];
-var infoWindow = new google.maps.InfoWindow();
+var markersArray = [];                          // use to delete the markersOverlay in API v3
+var infoWindow = new google.maps.InfoWindow();  // global infoWindow -> markers will create only one infoWindow (check plotMarkersLocationsFromJSON)
 
 function locationsInitialize() {
   loadMap();
@@ -79,16 +78,14 @@ function plotMarkersLocationsFromJSON(geoInfo) {
     '<br/>' + geoInfo.address +
     '<br/>' + geoInfo.region +
     '<br/>' + geoInfo.phone;
-  // var infoWindow = new google.maps.InfoWindow({
-  //   content: contentString
-  // });
+
   google.maps.event.addListener(marker, 'click', function() {
     infoWindow.setContent(contentString);
     infoWindow.open(map, marker);
   });
 
   markersArray.push(marker);
-  return marker;
+  return marker;  // Important: return this otherwise DomListener below won't work
 }
 
 function createSidebarEntry(name, address, phone, region, marker) {
