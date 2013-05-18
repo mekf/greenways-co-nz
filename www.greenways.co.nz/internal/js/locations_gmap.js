@@ -53,7 +53,7 @@ function loadSidebar() {
 
 function regionChange(region) {
   deleteMarkersOverlays();
-  infoWindow = new google.maps.InfoWindow();
+  infoWindow.close();
 
   if (region == 'region') loadSidebar();
   if (region == 'Plenty') region = 'Bay of Plenty';
