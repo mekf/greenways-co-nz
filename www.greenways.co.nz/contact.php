@@ -45,7 +45,7 @@
         <div id='contact_form'>
           <?php
             $contact_form = 1; // set desired form number.
-            $contact_form_path = '/home/minha/greenways-nz/contact-files/'; // set path to /contact-files/ with slash on end.
+            $contact_form_path = '/home/minh_ha/greenways-nz/contact-files/'; // set path to /contact-files/ with slash on end.
             require $contact_form_path . 'contact-form-run.php';
           ?>
         </div>
