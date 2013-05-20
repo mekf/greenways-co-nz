@@ -1,21 +1,15 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
 <head>
-
-  <script type="text/javascript" src="http://greenways.co.nz/contact-files/contact-form.js"></script>
-
   <meta charset="UTF-8" />
+  <title>Greenways - Contact Us</title>
+  <meta name="Keywords" content="Juice, Greenways, Healthy, Organic, Grape, Apple, Feijoa, Orange">
+  <meta name="Description" content="Locally grown goodness, squeezed and freshly bottled for your fruity lifestyle. Greenways is proud to be New Zealand owned since 1956. Our philosophy is simplicity, we do not add any preservatives or colourings, we let nature do the work for us in creating these great flavours for your enjoyment.">
+  <link rel="author" type="text/plain" href="http://www.greenways.co.nz/humans.txt" />
 
   <link rel="stylesheet" type="text/css" media="all" href="internal/css/global.css" />
 
-  <title>Greenways - Contact Us</title>
-
-  <meta name="Keywords" content="Juice, Greenways, Healthy, Organic, Grape, Apple, Feijoa, Orange">
-  <meta name="Description" content="Locally grown goodness, squeezed and freshly bottled for your fruity lifestyle. Greenways is proud to be New Zealand owned since 1956. Our philosophy is simplicity, we do not add any preservatives or colourings, we let nature do the work for us in creating these great flavours for your enjoyment.">
-
-  <link type="text/plain" rel="author" href="http://www.greenways.co.nz/humans.txt" />
-  
-  <script type="text/javascript" src="http://www.greenways-sandbox.tk/contact-files/contact-form.js"></script>
+  <script type="text/javascript" src="http://greenways.co.nz/contact-files/contact-form.js"></script>
   <script type="text/javascript" src='internal/js/analytics.js'></script>
 </head>
 
