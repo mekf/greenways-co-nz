@@ -1,0 +1,36 @@
+#slider-stage {
+  width: 980px;
+  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 350px;
+  margin: 0 auto;
+}
+
+#slider-buttons {
+  width: 980px;
+  margin: 0 auto;
+}
+
+#slider-list {
+  width: 2940px;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  left: 400px;
+}
+
+#slider-list li {
+  list-style:none; 
+  margin:0; 
+  padding:0; 
+  border:0; 
+  float:left;
+  width:980px;
+  height:350px;
+  }
+
+.p-bounce {
+  position: absolute;
+  top: 30px;
+}

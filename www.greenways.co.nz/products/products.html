@@ -2,27 +2,32 @@
 <html dir="ltr" lang="en-US"> 
 <head> 
 	<meta charset="UTF-8" /> 
-	 
-	<link rel="stylesheet" type="text/css" media="all" href="../internal/css/global.css" />
-	<link rel="stylesheet" href="http://www.greenways.co.nz/tabs/css/style.css">
-	 
 	<title>Greenways - Our Products</title>
-
 	<meta name="Keywords" content="Juice, Greenways, Healthy, Organic, Grape, Apple, Feijoa, Orange">
 	<meta name="Description" content="Locally grown goodness, squeezed and freshly bottled for your fruity lifestyle. Greenways is proud to be New Zealand owned since 1956. Our philosophy is simplicity, we do not add any preservatives or colourings, we let nature do the work for us in creating these great flavours for your enjoyment. ">
-
 	<link type="text/plain" rel="author" href="http://www.greenways.co.nz/humans.txt" />
+
+	<link rel="stylesheet" type="text/css" media="all" href="../internal/css/global.css" />
+	<link rel="stylesheet" type="text/css" media="all" href='../internal/css/products.css'/>
+	<link rel="stylesheet" href="http://www.greenways.co.nz/tabs/css/style.css">
 
 	<script src="../internal/assets/scripts/bouncer.js" type="text/javascript" charset="utf-8"></script>
 	<script src="../internal/assets/scripts/mootools.svn.js" type="text/javascript" charset="utf-8"></script>
 	
-	<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js'></script>
+	<!-- <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js'></script> -->
+	<script src='http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js'></script>
 	<script src="../internal/assets/scripts/organictabs.jquery.js"></script>
 	
 	<script>
-	     jQuery.noConflict();
+		// $(document).ready(function() {
+		// 	$('#tabs').organictabs();
+		// });
+	</script>
+	
+	<script>
+    jQuery.noConflict();
 	     
-	     // Use jQuery via jQuery(...)
+    // Use jQuery via jQuery(...)
 
 		jQuery(document).ready(function() {
 			jQuery(".focus").hover(function() {
@@ -74,29 +79,7 @@
 	      })
 		});
   </script>
-
-
-	
-<style type="text/css">
-#slider-stage{width:980px; overflow:hidden; overflow-x:hidden; overflow-y:hidden; height:350px; margin:0 auto;}
-#slider-buttons{width:980px; margin:0 auto;}
-	#slider-list{width:2940px; border:0; margin:0; padding:0; left:400px;}
-	#slider-list li{
-		list-style:none; 
-		margin:0; 
-		padding:0; 
-		border:0; 
-		float:left;
-		width:980px;
-		height:350px;
-		}
-
-.p-bounce {
- position:absolute;top:30px;
-}
-</style>
-
-<script type="text/javascript" src='internal/js/analytics.js'></script>
+	<script type="text/javascript" src='../internal/js/analytics.js'></script>
 </head>
 
 <body>
