@@ -1,9 +1,3 @@
-$(document).ready(function() {
-  $(function() {
-    $("#tabs").organicTabs();
-  })
-});
-
 jQuery.noConflict();
    
 // Use jQuery via jQuery(...)
@@ -18,9 +12,9 @@ jQuery(document).ready(function() {
   });
 });
  
-jQuery(function() {
-  jQuery("#tabs").organicTabs(); 
-});
+// jQuery(function() {
+//   jQuery("#tabs").organicTabs(); 
+// });
 
 // Use Prototype with $(...), etc.
 window.addEvent('domready', function(){ 
