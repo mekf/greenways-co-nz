@@ -32,10 +32,11 @@
                 // Set outer wrapper height to (static) height of current inner list
                     $allListWrap = base.$el.find(".list-wrap"),
                     curListHeight = $allListWrap.height();
-                    $allListWrap.height(curListHeight);
+
+                $allListWrap.height(curListHeight);
                                         
                 if ((listID != curList) && ( base.$el.find(":animated").length == 0)) {
-                                            
+                    
                     // Fade out current list
                     base.$el.find("#"+curList).fadeOut(base.options.speed, function() {
                         
