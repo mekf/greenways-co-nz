@@ -2,7 +2,6 @@ $(document).ready(function() {
   $('.hide').hide();
 
   // Monkey Patch from what available from scraped data
-
   $('#d-1309911635').fadeIn('slow');
 
   $('#p-1309911635').click(function() {
@@ -10,7 +9,6 @@ $(document).ready(function() {
     $('#d-1309911635').fadeIn('slow');
   });
 });
-
 // Rationale | Not working yet
 
 // get the current id then hide the list
